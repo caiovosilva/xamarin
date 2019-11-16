@@ -6,7 +6,20 @@
              mc:Ignorable="d"
              x:Class="TestDrive.MainPage">
 
-    <Grid VerticalOptions="Start">
+
+    <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding Nome}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+    <!--<Grid VerticalOptions="Start">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -23,6 +36,6 @@
         <Label Grid.Row="2" Grid.Column="0" Text="Opala 75"/>
         <Label Grid.Row="2" Grid.Column="1" Text="R$ 45677"/>
 
-    </Grid>
+    </Grid>-->
 
 </ContentPage>
