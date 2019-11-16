@@ -6,12 +6,23 @@
              mc:Ignorable="d"
              x:Class="TestDrive.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-        />
-        <Label Text="One more label in this stackLayout"
-        />
-    </StackLayout>
+    <Grid VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Text="Fusca 87"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="R$ 23134"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Chevete 83"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="R$ 34532"/>
+        <Label Grid.Row="2" Grid.Column="0" Text="Opala 75"/>
+        <Label Grid.Row="2" Grid.Column="1" Text="R$ 45677"/>
+
+    </Grid>
 
 </ContentPage>
