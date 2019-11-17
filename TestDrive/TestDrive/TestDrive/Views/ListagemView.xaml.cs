@@ -42,7 +42,7 @@ namespace TestDrive.Views
         {
             var veiculo = (Veiculo)e.Item;
 
-            Navigation.PushAsync(new DetalheView());
+            Navigation.PushAsync(new DetalheView(veiculo));
             //DisplayAlert("Test Drive", String.Format("Você clicou no modelo '{0}', que custa {1}", veiculo.Nome, veiculo.PrecoFormatado), "OK");
         }
     }

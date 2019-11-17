@@ -10,21 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace TestDrive.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetalheView : ContentPage
+    public partial class AgendamentoView : ContentPage
     {
         public Veiculo Veiculo { get; set; }
-
-        public DetalheView(Veiculo veiculo)
+        public AgendamentoView(Veiculo veiculo)
         {
             this.Veiculo = veiculo;
-            this.Title = String.Format("Detalhe {0}", Veiculo.Nome);
+            this.Title = String.Format("Agendamento {0}", Veiculo.Nome);
 
             InitializeComponent();
-        }
-
-        private void buttonProximo_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AgendamentoView(this.Veiculo));
         }
     }
 }
