@@ -7,12 +7,21 @@
              x:Class="TestDrive.MainPage">
 
 
-    <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}">
+    <ListView
+        x:Name="listViewVeiculos"
+        ItemsSource="{Binding Veiculos}"
+        Margin="20"
+        ItemTapped="listViewVeiculos_ItemTapped"
+    >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding Nome}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nome}" VerticalTextAlignment="Center"/>
+                            <Label Text=" - " VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding PrecoFormatado}" VerticalTextAlignment="Center"/>
+                        </StackLayout>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>

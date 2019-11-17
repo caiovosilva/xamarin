@@ -22,8 +22,8 @@ namespace TestDrive
             this.Veiculos = new List<Veiculo>()
             {
                 new Veiculo{ Nome="Fusca 87", Preco=3213 },
-                new Veiculo{ Nome="Onix 2019", Preco=3213 },
-                new Veiculo{ Nome="Tesla 2020", Preco=3213 }
+                new Veiculo{ Nome="Onix 2019", Preco=32130 },
+                new Veiculo{ Nome="Tesla 2020", Preco=321300 }
             };
 
             this.BindingContext = this;
@@ -35,6 +35,12 @@ namespace TestDrive
             //    "Onix 2019",
             //    "Tesla"
             //};
+        }
+
+        private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var veiculo = (Veiculo)e.Item;
+            DisplayAlert("Test Drive", String.Format("Você clicou no modelo '{0}', que custa {1}", veiculo.Nome, veiculo.PrecoFormatado), "OK");
         }
     }
 }

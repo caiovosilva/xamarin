@@ -8,5 +8,10 @@ namespace TestDrive.Models
     {
         public string Nome { get; set; }
         public decimal Preco { get; set; }
+        public string PrecoFormatado {
+            get {
+                return String.Format("R$ {0}", Preco);
+            }
+        }
     }
 }
