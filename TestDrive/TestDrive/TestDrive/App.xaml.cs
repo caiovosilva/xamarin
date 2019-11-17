@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using TestDrive.Views;
 
 namespace TestDrive
 {
@@ -10,7 +11,7 @@ namespace TestDrive
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ListagemView());
         }
 
         protected override void OnStart()
