@@ -5,11 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestDrive.Views.DetalheView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="25">
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Acessórios">
+                        <SwitchCell Text="{Binding TextoFreioABS}" On="True" />
+                        <SwitchCell Text="{Binding TextoArCondicionado}" />
+                        <SwitchCell Text="{Binding TextoMP3}" />
+                        <TextCell Text="{Binding TextoTotal}" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            
             <Button 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
@@ -17,5 +24,4 @@
                 x:Name="buttonProximo"
                 Clicked="buttonProximo_Clicked" />
         </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

@@ -12,8 +12,45 @@ namespace TestDrive.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetalheView : ContentPage
     {
+        private const int VALOR_FREIO_ABS = 800;
+        private const int VALOR_AR_CONDICIONADO = 1000;
+        private const int VALOR_MP3 = 500;
         public Veiculo Veiculo { get; set; }
 
+        //public string TextoFreioABS {
+        //    get {
+        //        return "sdasdas";
+        //        //return string.Format("Freio ABS - R$ {0}", VALOR_FREIO_ABS);
+        //    } 
+        //}
+
+        public string TextoFreioABS {
+            get {
+                return string.Format("Freio ABS - R$ {0}", VALOR_FREIO_ABS);
+            }
+        }
+
+        public string TextoArCondionado {
+            get {
+                return string.Format("Ar Condionado - R$ {0}", VALOR_AR_CONDICIONADO);
+            }
+        }
+
+        public string TextoMP3 {
+            get {
+                return string.Format("MP3 Player - R$ {0}", VALOR_MP3);
+            }
+        }
+
+        public bool isFreioABS { get; set; }
+
+        public string TextoTotal {
+            get {
+                return string.Format("Total: R$ {0}", 
+                    Veiculo.Preco
+                    + (isFreioABS ? 800 : 0));
+            }
+        }
         public DetalheView(Veiculo veiculo)
         {
             this.Veiculo = veiculo;
