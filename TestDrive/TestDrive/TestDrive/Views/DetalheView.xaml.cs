@@ -17,13 +17,6 @@ namespace TestDrive.Views
         private const int VALOR_MP3 = 500;
         public Veiculo Veiculo { get; set; }
 
-        //public string TextoFreioABS {
-        //    get {
-        //        return "sdasdas";
-        //        //return string.Format("Freio ABS - R$ {0}", VALOR_FREIO_ABS);
-        //    } 
-        //}
-
         public string TextoFreioABS {
             get {
                 return string.Format("Freio ABS - R$ {0}", VALOR_FREIO_ABS);
