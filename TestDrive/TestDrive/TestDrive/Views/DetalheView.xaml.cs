@@ -35,13 +35,13 @@ namespace TestDrive.Views
             }
         }
 
-        public bool isFreioABS { get; set; }
+        public bool EhFreioABS { get; set; }
 
         public string TextoTotal {
             get {
                 return string.Format("Total: R$ {0}", 
                     Veiculo.Preco
-                    + (isFreioABS ? 800 : 0));
+                    + (EhFreioABS ? 800 : 0));
             }
         }
         public DetalheView(Veiculo veiculo)
